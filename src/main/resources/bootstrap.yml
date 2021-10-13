@@ -1,9 +1,12 @@
 spring:
   application:
-    name: javainuseapp
+    name: myapp
   cloud:
     vault:
       host: localhost
       port: 8200
       scheme: http
-      token: root
+      token: s.juLvTiDGz9Zei3g9ZlJ1nOl5
+      database:
+        enabled: true
+        role: my-role
