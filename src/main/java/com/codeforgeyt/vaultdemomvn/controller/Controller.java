@@ -20,7 +20,7 @@ public class Controller {
     DataSource dataSource;
 
     @GetMapping("/get")
-    public String value() throws SQLException {
+    public String value(){
         String userName = env.getProperty("spring.datasource.username");
         String password = env.getProperty("spring.datasource.password");
         return userName + " " + password;
