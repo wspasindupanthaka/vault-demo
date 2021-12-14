@@ -107,6 +107,7 @@
 				</executions>
 			</plugin>
 		</plugins>
+		<finalName>vault-demo</finalName>
 	</build>
 
 </project>

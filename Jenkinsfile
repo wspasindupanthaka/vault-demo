@@ -7,26 +7,19 @@ pipeline {
               bat "mvn clean"
             }
         }
-        stage('Testing Stage') {
+        stage('Building Stage') {
             steps {
                 bat "mvn test"
-            }
-        }
-        stage('Sonar Scan') {
-            steps {
                 bat "mvn sonar:sonar -Dsonar.login=7b31dbdca942282c3705d9d5844b25e89fc690c3"
+                bat "mvn package"
+                docker.build("pasindu92/vault-demo")
             }
         }
-        stage('Packaging Stage') {
-             steps {
-                bat "mvn package"
-             }
-        }
+
     }
 
     post {
 
-    // Email Ext plugin:
     success {
   echo 'Success..'
     }

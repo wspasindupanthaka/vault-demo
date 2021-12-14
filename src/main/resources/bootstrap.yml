@@ -3,7 +3,7 @@ spring:
     name: myapp
   cloud:
     vault:
-      host: localhost
+      host: ${VAULT_HOST:localhost}
       port: 8200
       scheme: http
       token: s.juLvTiDGz9Zei3g9ZlJ1nOl5
