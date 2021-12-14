@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.sql.DataSource;
-import java.sql.SQLException;
 
 @RequestMapping("controller")
 @RestController
@@ -20,7 +19,7 @@ public class Controller {
     DataSource dataSource;
 
     @GetMapping("/get")
-    public String value(){
+    public String value() {
         String userName = env.getProperty("spring.datasource.username");
         String password = env.getProperty("spring.datasource.password");
         return userName + " " + password;
