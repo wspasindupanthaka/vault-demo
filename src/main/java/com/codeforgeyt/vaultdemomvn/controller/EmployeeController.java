@@ -19,7 +19,6 @@ public class EmployeeController {
 
     @GetMapping("/list")
     public List<Employee> findAll() throws SQLException {
-        System.out.println("Retrieving Employee");
        return employeeService.findAll();
     }
 
