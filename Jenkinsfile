@@ -23,7 +23,7 @@ pipeline {
 
     // Email Ext plugin:
     success {
-  echo 'Success..'
+  echo 'Successful..'
     }
 
     failure {
