@@ -8,7 +8,7 @@ import org.springframework.util.Assert;
 
 
 @SpringBootTest
-public class SmokeTest {
+class SmokeTest {
 
     @Autowired
     private EmployeeController employeeController;
