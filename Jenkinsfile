@@ -12,7 +12,7 @@ pipeline {
                 bat "mvn test"
             }
         }
-        stage('Testing Stage') {
+        stage('Packaging Stage') {
              steps {
                 bat "mvn package"
              }
@@ -23,11 +23,11 @@ pipeline {
 
     // Email Ext plugin:
     success {
-
+  echo 'Success..'
     }
 
     failure {
-
+echo 'Failure..'
     }
   }
 }
