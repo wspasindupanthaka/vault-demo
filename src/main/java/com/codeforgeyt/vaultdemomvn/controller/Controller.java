@@ -11,7 +11,6 @@ import java.sql.SQLException;
 
 @RequestMapping("controller")
 @RestController
-
 public class Controller {
 
     @Autowired
@@ -24,7 +23,6 @@ public class Controller {
     public String value() throws SQLException {
         String userName = env.getProperty("spring.datasource.username");
         String password = env.getProperty("spring.datasource.password");
-        dataSource.getConnection();
         return userName + " " + password;
     }
 
