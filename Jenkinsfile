@@ -20,7 +20,6 @@ pipeline {
         stage('Test') {
              steps {
                  echo '**************** Test ****************'
-                 bat "docker scan vault-demo"
              }
         }
         stage('Deploy') {
