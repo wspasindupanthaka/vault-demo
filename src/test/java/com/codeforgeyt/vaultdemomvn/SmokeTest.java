@@ -14,7 +14,7 @@ class SmokeTest {
     private EmployeeController employeeController;
 
     @Test
-    public void contextLoads() throws Exception {
+    void contextLoads() throws Exception {
         Assert.notNull(employeeController, "Employee Controller Not Null");
     }
 }
