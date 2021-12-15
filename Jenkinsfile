@@ -23,7 +23,7 @@ pipeline {
         stage('Test') {
              steps {
                  echo '**************** Test ****************'
-                 bat "docker run -u root --rm -v /var/run/docker.sock:/var/run/docker.sock -v $/tmp/.cache/ aquasec/trivy:0.10.0 vault-demo:latest"
+                 bat "docker run -u root --rm -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/.cache/ aquasec/trivy:0.10.0 vault-demo:latest"
              }
         }
         stage('Deploy') {
