@@ -14,9 +14,7 @@ public class Employee {
     private String employeeName;
 
     public Employee() {
-        /**
-         * Default constructor
-         */
+
     }
 
     public long getEmployeeId() {
