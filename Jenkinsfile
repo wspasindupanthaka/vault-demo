@@ -20,12 +20,13 @@ pipeline {
         stage('Test') {
              steps {
                  echo '**************** Test ****************'
+                 bat "docker scan vault-demo"
              }
         }
         stage('Deploy') {
              steps {
                  echo '**************** Deploy ****************'
-                 bat "docker container run --detach -e VAULT_HOST=host.docker.internal -e MYSQL_HOST=host.docker.internal -p 8080:8080 vault-demo"
+                 bat "docker container run --detached -e VAULT_HOST=host.docker.internal -e MYSQL_HOST=host.docker.internal -p 8080:8080 vault-demo"
              }
         }
     }
