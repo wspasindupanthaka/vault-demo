@@ -25,18 +25,6 @@ pipeline {
                    }
                  }
         }
-//         stage('Test') {
-//              steps {
-//                  echo '**************** Test ****************'
-//                  bat "docker run -u root --rm -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/.cache/ aquasec/trivy:0.10.0 pasindu92/vault-demo:latest"
-//              }
-//         }
-//         stage('Deploy') {
-//              steps {
-//                  echo '**************** Deploy ****************'
-//                  bat "docker container run --detach -e VAULT_HOST=host.docker.internal -e MYSQL_HOST=host.docker.internal -p 8080:8080 vault-demo"
-//              }
-//         }
     }
 
     post {
