@@ -12,9 +12,9 @@ pipeline {
             steps {
                 echo '**************** Build ****************'
                 bat "mvn test"
-                withCredentials([vaultString(credentialsId: 'vault-secret-text', variable: 'SONAR_TOKEN')]) {
+                withCredentials([vaultString(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
                     echo SONAR_TOKEN
-                    bat "mvn sonar:sonar -Dsonar.login=dsfsdfdsfdsf"
+                    bat "mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN"
                 }
                 bat "mvn package"
                 bat "docker build --tag=vault-demo:latest ."
