@@ -16,6 +16,7 @@ pipeline {
                     echo SONAR_TOKEN
                     bat "mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN"
                 }
+                bat "mvn org.owasp:dependency-check-maven:check"
                 bat "mvn package"
                 bat "docker build --tag=vault-demo:latest ."
             }
@@ -29,7 +30,7 @@ pipeline {
         stage('Deploy') {
              steps {
                  echo '**************** Deploy ****************'
-                 bat "docker container run --detached -e VAULT_HOST=host.docker.internal -e MYSQL_HOST=host.docker.internal -p 8080:8080 vault-demo"
+                 bat "docker container run --detach -e VAULT_HOST=host.docker.internal -e MYSQL_HOST=host.docker.internal -p 8080:8080 vault-demo"
              }
         }
     }
