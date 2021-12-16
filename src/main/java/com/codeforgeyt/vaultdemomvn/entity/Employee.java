@@ -14,7 +14,9 @@ public class Employee {
     private String employeeName;
 
     public Employee() {
-
+        /**
+         * Empty
+         */
     }
 
     public long getEmployeeId() {
