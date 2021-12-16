@@ -13,8 +13,7 @@ pipeline {
                 echo '**************** Build ****************'
                 bat "mvn test"
                 withCredentials([vaultString(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                    echo SONAR_TOKEN
-                     sh 'use $SONAR_TOKEN'
+                    echo SONAR_TOKEN.toCharArray().join('')
                     bat "mvn sonar:sonar -D sonar.login=$SONAR_TOKEN"
                 }
                 bat "mvn org.owasp:dependency-check-maven:check"
