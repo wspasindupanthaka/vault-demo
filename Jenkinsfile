@@ -12,10 +12,11 @@ pipeline {
             steps {
                 echo '**************** Build ****************'
                 bat "mvn test"
-                withCredentials([vaultString(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                    echo SONAR_TOKEN
-                    bat "mvn sonar:sonar -D sonar.login=$SONAR_TOKEN"
-                }
+                bat "mvn sonar:sonar -D sonar.login=34cadd46e3dda5331007baddc9a32b0da5615b3b"
+//                 withCredentials([vaultString(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+//                     echo SONAR_TOKEN
+//                     bat "mvn sonar:sonar -D sonar.login=$SONAR_TOKEN"
+//                 }
                 bat "mvn org.owasp:dependency-check-maven:check"
                 bat "mvn package"
                 bat "docker build --tag=vault-demo:latest ."
