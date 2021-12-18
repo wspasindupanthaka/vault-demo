@@ -1,6 +1,6 @@
-package com.codeforgeyt.vaultdemomvn;
+package com.pasindu.vaultdemo;
 
-import com.codeforgeyt.vaultdemomvn.controller.EmployeeController;
+import com.pasindu.vaultdemo.controller.impl.EmployeeControllerImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +11,7 @@ import org.springframework.util.Assert;
 class SmokeTest {
 
     @Autowired
-    private EmployeeController employeeController;
+    private EmployeeControllerImpl employeeController;
 
     @Test
     void contextLoads() throws Exception {

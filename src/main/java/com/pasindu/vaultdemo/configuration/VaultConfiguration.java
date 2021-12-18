@@ -1,4 +1,4 @@
-package com.codeforgeyt.vaultdemomvn.configuration;
+package com.pasindu.vaultdemo.configuration;
 
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;

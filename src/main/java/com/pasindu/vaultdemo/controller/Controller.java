@@ -1,4 +1,4 @@
-package com.codeforgeyt.vaultdemomvn.controller;
+package com.pasindu.vaultdemo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -14,9 +14,6 @@ public class Controller {
 
     @Autowired
     private Environment env;
-
-    @Autowired
-    DataSource dataSource;
 
     @GetMapping("/get")
     public String value() {

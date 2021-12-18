@@ -1,4 +1,4 @@
-package com.codeforgeyt.vaultdemomvn;
+package com.pasindu.vaultdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

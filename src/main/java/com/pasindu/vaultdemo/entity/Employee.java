@@ -1,4 +1,4 @@
-package com.codeforgeyt.vaultdemomvn.entity;
+package com.pasindu.vaultdemo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
